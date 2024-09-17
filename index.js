@@ -185,7 +185,7 @@ function transferDivPage() {
 
 
     const recepInput = document.createElement('input');
-    recepInput.placeholder = 'enter reciver account number';
+    recepInput.placeholder = 'enter reciever account number';
     recepInput.classList.add('bg-white', 'border-2', 'rounded-lg', 'p-2')
 
     const money = document.createElement('input');
@@ -251,12 +251,12 @@ function transferDivPage() {
             })
             console.log(transc);
             localStorage.setItem('trans', JSON.stringify(transc))
-                alert('data updated');
+                alert('transfered ammount' + mon + " to acc. no " +  rcv);
             }
             //localStorage.setItem('userinfo', useinfo);
         }
         else {
-            alert('user or recver not found')
+            alert('user or reciever not found')
         }
         // console.log(acc,mon)
         // alert(mon)
@@ -378,7 +378,7 @@ function perTrans(props) {
     h1.innerText ='send account no. ' + " " +  senderId;
     
     const h2 = document.createElement('h1');
-    h2.innerText =  recvId?'reciver account no. ' + " " + recvId:' Deposited to bank ';
+    h2.innerText =  recvId?'receiver account no. ' + " " + recvId:' Deposited to bank ';
     if(bank)
     {
         h2.innerText ='withdrawn from bank';
@@ -390,7 +390,7 @@ function perTrans(props) {
     if(recived)
     {
         h1.innerText ='send account no. ' + " " + recvId;
-        h2.innerText = 'recived money '
+        h2.innerText = 'received money '
     }
 
 
