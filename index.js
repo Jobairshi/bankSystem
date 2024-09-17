@@ -72,7 +72,7 @@ function depositDivPage() {
             useinfo[find].money += Number(mon);
             console.log(useinfo);
             
-            alert('data updated');
+            alert('money deposited' + " " + mon);
             localStorage.setItem('userinfo', JSON.stringify(useinfo));
 
             const transc = JSON.parse(localStorage.getItem('trans'))
@@ -144,7 +144,7 @@ function withDrawDivPage() {
                 useinfo[find].money -= Number(mon);
                 console.log(useinfo);
                 localStorage.setItem('userinfo', JSON.stringify(useinfo))
-                alert('data updated');
+                alert('money withdrawn' + "  " + mon);
                 const transc = JSON.parse(localStorage.getItem('trans'))
                 transc.push({
                     senderId: acc,
